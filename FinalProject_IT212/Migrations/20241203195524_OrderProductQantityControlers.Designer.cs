@@ -4,6 +4,7 @@ using FinalProject_IT212.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinalProject_IT212.Migrations
 {
     [DbContext(typeof(FinalProject_IT212Context))]
-    partial class FinalProject_IT212ContextModelSnapshot : ModelSnapshot
+    [Migration("20241203195524_OrderProductQantityControlers")]
+    partial class OrderProductQantityControlers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

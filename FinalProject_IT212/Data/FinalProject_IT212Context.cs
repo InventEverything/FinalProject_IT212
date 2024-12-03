@@ -15,5 +15,8 @@ namespace FinalProject_IT212.Data
         }
 
         public DbSet<FinalProject_IT212.Models.Customers> Customers { get; set; } = default!;
+        public DbSet<FinalProject_IT212.Models.Orders> Orders { get; set; } = default!;
+        public DbSet<FinalProject_IT212.Models.Products> Products { get; set; } = default!;
+        public DbSet<FinalProject_IT212.Models.Quantity> Quantity { get; set; } = default!;
     }
 }
