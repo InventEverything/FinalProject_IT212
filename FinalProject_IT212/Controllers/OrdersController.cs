@@ -25,7 +25,13 @@ namespace FinalProject_IT212.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Orders>>> GetOrders()
         {
-            return await _context.Orders.ToListAsync();
+            return await _context.Orders.Select(o => new Orders
+            {
+                OrderId = o.OrderId,
+                CustomerId = o.CustomerId,
+                ProductQty = o.ProductQty,
+                OrderCost = o.OrderCost
+            }).ToListAsync();
         }
 
         // GET: api/Orders/5
@@ -38,8 +44,7 @@ namespace FinalProject_IT212.Controllers
             {
                 return NotFound();
             }
-
-            return orders;
+                return orders;
         }
 
         // PUT: api/Orders/5
